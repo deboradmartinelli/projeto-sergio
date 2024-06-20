@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { CategoriasComponent } from './categorias/categorias.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { ProdutosPageComponent } from './produtos-page/produtos-page.component';
 import { ClientListPage } from './clientes/client-list-page.component';

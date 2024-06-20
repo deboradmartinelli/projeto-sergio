@@ -6,8 +6,8 @@
     <h3>Quantidade total de personagens: {{ quantidadeDePersonagens }}</h3>
     <article *ngFor="let personagem of listaStarWars">
       <h2>{{ personagem.name }}</h2>
-      <p>{{ personagem.created | date : "dd/MM/yyyy" }}</p>
-      <p>{{ personagem.height }}</p>
+      <p>Peso: {{ personagem.mass }}kg</p>
+      <p>Altura: {{ personagem.height / 100 }}m</p>
     </article>
   </div>
 </section>

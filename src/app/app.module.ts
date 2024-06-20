@@ -8,7 +8,6 @@ import { MenuSuperiorComponent } from './menu-superior/menu-superior.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { ProdutosPageComponent } from './produtos-page/produtos-page.component';
 import { HttpClientModule } from '@angular/common/http';
-import { CategoriasComponent } from './categorias/categorias.component';
 
 import { ClientModule } from './clientes/client.module';
 
@@ -18,7 +17,6 @@ import { ClientModule } from './clientes/client.module';
     MenuSuperiorComponent,
     HomePageComponent,
     ProdutosPageComponent,
-    CategoriasComponent,
   ],
   imports: [
     BrowserModule,
