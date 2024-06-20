@@ -1,0 +1,13 @@
+<section>
+  <button (click)="carregar()">Carregar</button>
+  <button (click)="limpar()">Limpar</button>
+  <div>
+    <h1>Personagens Starwars:</h1>
+    <h3>Quantidade total de personagens: {{ quantidadeDePersonagens }}</h3>
+    <article *ngFor="let personagem of listaStarWars">
+      <h2>{{ personagem.name }}</h2>
+      <p>{{ personagem.created | date : "dd/MM/yyyy" }}</p>
+      <p>{{ personagem.height }}</p>
+    </article>
+  </div>
+</section>

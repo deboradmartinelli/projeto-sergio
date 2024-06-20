@@ -1,0 +1,21 @@
+<section>
+  <h1>{{ clienteAtual.nome }}</h1>
+  <button class="btn btn-primary btn-lg newBtn" routerLink="editar">
+    Editar este Cliente
+  </button>
+  <p><b>Tipo:</b> {{ clienteAtual.tipo }}</p>
+  <p><b>Gênero:</b> {{ clienteAtual.genero }}</p>
+  <p>
+    <b>Data de Nascimento:</b>
+    {{ clienteAtual.dataNascimento | date : "dd/MM/yyyy" }}
+  </p>
+  <p><b>Observações:</b> {{ clienteAtual.observacao }}</p>
+  <p><b>Inativo:</b> {{ clienteAtual.inativo }}</p>
+  <button
+    type="button"
+    class="btn btn-outline-secondary btn-lg"
+    routerLink="/clientes"
+  >
+    Voltar
+  </button>
+</section>

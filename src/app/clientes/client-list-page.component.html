@@ -1,0 +1,61 @@
+<section>
+  <h1>Lista de Clientes</h1>
+  <button class="btn btn-primary btn-lg newBtn" routerLink="cadastro">
+    Cadastrar Novo Cliente
+  </button>
+  <table *ngIf="listaDeClientes.length > 0">
+    <tr>
+      <th>Nome</th>
+      <th>Tipo</th>
+      <th>Genero</th>
+      <th>Nascimento</th>
+      <th class="action-col"></th>
+    </tr>
+    <tr
+      *ngFor="let cliente of listaDeClientes"
+      [ngClass]="{ inativo: cliente.inativo }"
+    >
+      <td [routerLink]="cliente.id.toString()">
+        {{ cliente.nome }}
+      </td>
+      <td [routerLink]="cliente.id.toString()">
+        {{ cliente.tipo }}
+      </td>
+      <td [routerLink]="cliente.id.toString()">
+        {{ cliente.genero }}
+      </td>
+      <td [routerLink]="cliente.id.toString()">
+        {{ cliente.dataNascimento | date : "dd/MM/yyyy" }}
+      </td>
+      <td class="action-col">
+        <button class="btn btn-primary" [routerLink]="cliente.id + '/editar'">
+          Editar
+        </button>
+        <button
+          class="btn btn-danger"
+          [disabled]="cliente.inativo"
+          (click)="abrirModal(cliente)"
+        >
+          Deletar
+        </button>
+      </td>
+    </tr>
+  </table>
+
+  <p style="text-align: center" *ngIf="listaDeClientes.length === 0">
+    Não há clientes cadastrados.
+  </p>
+</section>
+
+<div class="overlayLucas" *ngIf="exibirModal">
+  <div class="modalLucas">
+    <h2>Deletar Cliente:</h2>
+    <p>
+      Tem certeza que deseja deletar o cliente
+      <b>{{ clienteSelecionado.nome }}</b
+      >?
+    </p>
+    <button class="btn btn-danger" (click)="deletarCliente()">Sim</button>
+    <button class="btn btn-primary" (click)="exibirModal = false">Não</button>
+  </div>
+</div>

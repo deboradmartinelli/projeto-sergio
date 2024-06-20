@@ -1,0 +1,30 @@
+section {
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 50px;
+  h1 {
+    margin-bottom: 30px;
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+    .invalid-feedback {
+      margin-top: -23px !important;
+    }
+    input,
+    select,
+    textarea {
+      margin-bottom: 23px;
+    }
+
+    #masculino {
+      margin-bottom: 0;
+    }
+    button {
+      margin-top: 20px;
+    }
+    button[type="submit"] {
+      margin-right: 20px;
+    }
+  }
+}

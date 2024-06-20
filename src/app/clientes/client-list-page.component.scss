@@ -1,0 +1,68 @@
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td,
+th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+td {
+  cursor: pointer;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+.action-col {
+  width: 190px;
+  button {
+    margin-left: 10px;
+  }
+}
+section {
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 50px;
+}
+h1 {
+  margin-bottom: 15px;
+}
+.newBtn {
+  margin-bottom: 40px;
+  margin-right: 0;
+  margin-left: auto;
+  display: block;
+}
+
+.inativo {
+  color: red;
+}
+
+.overlayLucas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .modalLucas {
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    h2 {
+      margin-bottom: 20px;
+    }
+    button {
+      margin-right: 8px;
+    }
+  }
+}
